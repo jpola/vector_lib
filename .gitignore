@@ -33,3 +33,4 @@
 
 #QT user
 *.user
+.idea/

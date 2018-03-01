@@ -5,40 +5,58 @@
 
 namespace ismk {
 
-class  vector {
+class vector {
 
 public:
-vector();
-~vector();
-vector(std::size_t size, float val = 0);
+    vector();
 
-vector(const vector& other);
+    ~vector();
 
-vector(vector&& other);
+    vector(std::size_t size, float val = 0);
 
-vector& operator=(vector other);
+    vector(const vector &other);
 
+    vector(vector &&other);
 
+    vector &operator=(vector other);
 
-friend void swap(vector& first, vector& second);
+    friend void swap(vector &first, vector &second);
 
 private:
 
-std::size_t size;
-float* data;
+    std::size_t size;
+    float *data;
 
 };
 
 
+// elementwise addtion
+vector add(const vector &first, const vector &second);
 
-vector add (const vector& first, const vector& second);
-vector sub (const vector& first, const vector& second);
-vector mul (const vector& first, const vector& second);
-vector div (const vector& first, const vector& second);
+// elementwise subtraction
+vector sub(const vector &first, const vector &second);
 
-float dot(const vector& first, const vector& second);
-float norm(const vector& first, const vector& second);
-float norm2(const vector& first, const vector& second);
+// elementwise multiplication
+vector mul(const vector &first, const vector &second);
+
+// elementwise division
+vector div(const vector &first, const vector &second);
+
+// scale vector
+vector scale(vector& v, const float s);
+
+// add value
+vector add(vector& v, const float s);
+
+//dot product
+float dot(const vector &first, const vector &second);
+
+// L1 norm
+float norm(const vector &first, const vector &second);
+
+// L2 norm
+float norm2(const vector &first, const vector &second);
+
 
 
 
