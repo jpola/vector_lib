@@ -22,6 +22,8 @@ public:
 
     friend void swap(vector &first, vector &second);
 
+    std::size_t get_size() const ;
+
 private:
 
     std::size_t size;
