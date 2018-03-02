@@ -32,9 +32,15 @@ vector::~vector() {
 }
 
 
+std::size_t vector::get_size() const {
+    return size;
+}
+
 void swap(vector &first, vector &second) {
     using std::swap;
     swap(first.size, second.size);
     swap(first.data, second.data);
 }
+
+
 }// namespace ismk
