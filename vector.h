@@ -22,12 +22,12 @@ public:
 
     friend void swap(vector &first, vector &second);
 
-    std::size_t get_size() const ;
+    std::size_t size() const ;
 
 private:
 
-    std::size_t size;
-    float *data;
+    std::size_t m_size;
+    float *m_data;
 
 };
 
