@@ -37,5 +37,4 @@ void swap(vector &first, vector &second) {
     swap(first.size, second.size);
     swap(first.data, second.data);
 }
-
 }// namespace ismk
