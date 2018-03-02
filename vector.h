@@ -32,6 +32,7 @@ private:
 
 // elementwise addtion
 vector add(const vector &first, const vector &second);
+// to bym zrobil
 
 // elementwise subtraction
 vector sub(const vector &first, const vector &second);
