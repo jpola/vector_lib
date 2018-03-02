@@ -42,5 +42,9 @@ void swap(vector &first, vector &second) {
     swap(first.data, second.data);
 }
 
+vector sub(const vector &first, const vector &second){
+    return first.data-second.data;
+}
+
 
 }// namespace ismk
