@@ -5,15 +5,15 @@
 
 namespace ismk {
 
-vector::vector() : size(0), data(nullptr) {}
+vector::vector() : m_size(0), m_data(nullptr) {}
 
-vector::vector(std::size_t size, const float val) : size(size), data(size ? new float[size] : nullptr) {
-    std::fill(data, data + size, val);
+vector::vector(std::size_t size, const float val) : m_size(size), m_data(size ? new float[size] : nullptr) {
+    std::fill(m_data, m_data + size, val);
 }
 
 vector::vector(const vector &other) :
-        size(other.size),
-        data(size ? new float[size] : nullptr) {
+        m_size(other.m_size),
+		m_data(m_size ? new float[m_size] : nullptr) {
 
 }
 
@@ -27,19 +27,19 @@ vector &vector::operator=(vector other) {
 }
 
 vector::~vector() {
-    delete[] data;
-    data = nullptr;
+    delete[] m_data;
+	m_data = nullptr;
 }
 
 
-std::size_t vector::get_size() const {
-    return size;
+std::size_t vector::size() const {
+    return m_size;
 }
 
 void swap(vector &first, vector &second) {
     using std::swap;
-    swap(first.size, second.size);
-    swap(first.data, second.data);
+    swap(first.m_size, second.m_size);
+    swap(first.m_data, second.m_data);
 }
 
 
