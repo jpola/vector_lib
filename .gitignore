@@ -34,3 +34,4 @@
 #QT user
 *.user
 .idea/
+*.autosave
